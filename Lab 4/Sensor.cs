@@ -1,14 +1,4 @@
-﻿/* Lab Question  
- * 
- * In this lab, we have split the refactored the Cell class by creating a new Sensor class
- * and moving much of the functionality of recording the temperature/flux 
- * measurements into this new class. Which SOLID principles are we doing our best to abide
- * by here? Do you think this refactoring was worthwhile? Justify your answer by providing
- * some upsides and downsides.
- *  
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Lab4.Materials;
@@ -47,7 +37,7 @@ namespace Lab4.ModelComponents
 			return Material.EmitData(temp, out energy);
 		}
 
-		public void TakeMeasurements(double effEnergy, double tEq)
+		public void TakeMeasurements(List<Phonon> phonons, double effEnergy, double tEq)
 		{
 			int energyUnits = 0;
 			double xFlux = 0;

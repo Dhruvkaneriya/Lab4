@@ -25,7 +25,9 @@ namespace Lab4
 
 			Material silicon = new Material(in dData, in rData);
 
-			Cell c = new Cell(10, 10, silicon, 300);
+			Sensor s = new Sensor(1, silicon, 300);
+
+			Cell c = new Cell(10, 10, s);
 
 			Console.WriteLine(c);
 

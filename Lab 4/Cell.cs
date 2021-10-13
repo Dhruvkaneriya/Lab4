@@ -23,9 +23,13 @@ namespace Lab4.ModelComponents
 		private List<Phonon> incomingPhonons = new() { };
 		private ISurface[] surfaces = new ISurface[NUM_SURFACES];
 		public List<Phonon> Phonons { get { return phonons; } }
+		private Sensor sensor;
 
-		public Cell(double length, double width, Material material, double initTemp) : base(length, width)
+		public Cell(double length, double width, Sensor sensor) : base(length, width)
 		{
+			this.sensor = sensor;
+			this.sensor.AddToArea(this.Area);
+
 			for (int i = 0; i < NUM_SURFACES; ++i)
 			{
 				surfaces[i] = new BoundarySurface((SurfaceLocation)i, this);
@@ -106,9 +110,19 @@ namespace Lab4.ModelComponents
 			}
 		}
 
+		public Sensor GetSensor()
+		{
+			return sensor;
+		}
+
+		public void TakeMeasurements(double effEnergy, double tEq)
+		{
+			sensor.TakeMeasurements(phonons, effEnergy, tEq);
+		}
+
 		public override string ToString()
 		{
-			return string.Format("{0,-5} {1,-7} {2,-7}", Math.Round(Temperature, 2), phonons.Count, incomingPhonons.Count);
+			return string.Format("{0,-20} {1,-7} {2,-7}", sensor.ToString(), phonons.Count, incomingPhonons.Count);
 		}
 	}
 }
