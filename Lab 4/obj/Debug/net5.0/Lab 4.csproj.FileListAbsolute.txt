@@ -1,0 +1,16 @@
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.exe
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.deps.json
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.runtimeconfig.json
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.runtimeconfig.dev.json
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.dll
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\ref\Lab 4.dll
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\bin\Debug\net5.0\Lab 4.pdb
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.csproj.AssemblyReference.cache
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.AssemblyInfoInputs.cache
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.AssemblyInfo.cs
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.csproj.CoreCompileInputs.cache
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.dll
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\ref\Lab 4.dll
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.pdb
+C:\Users\DhruvDK\Documents\Cambrian\IOT1026\Repositories\Lab4\Lab 4\obj\Debug\net5.0\Lab 4.genruntimeconfig.cache
