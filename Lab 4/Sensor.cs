@@ -41,6 +41,49 @@ namespace Lab4.ModelComponents
 			Temperature = initTemp;
 		}
 
+		public void AddToArea(double area) => AreaCovered += area;
+		public Tuple<double, double>[] GetEmitData(double temp, out double energy)
+		{
+			return Material.EmitData(temp, out energy);
+		}
+
+		public void TakeMeasurements(double effEnergy, double tEq)
+		{
+			int energyUnits = 0;
+			double xFlux = 0;
+			double yFlux = 0;
+			foreach (var p in phonons)
+			{
+				int sign = p.Sign;
+				p.GetDirection(out double dx, out double dy);
+				energyUnits += sign;
+				xFlux += dx * p.Speed * sign;
+				yFlux += dy * p.Speed * sign;
+			}
+			double fluxFactor = effEnergy / AreaCovered;
+
+			temperatures.Add((energyUnits * effEnergy / (AreaCovered * HeatCapacity)) + tEq);
+			xFluxes.Add(fluxFactor * xFlux);
+			yFluxes.Add(fluxFactor * yFlux);
+			UpdateParams();
+		}
+
+		public SensorMeasurements GetMeasurements()
+		{
+			SensorMeasurements measurements;
+			measurements.InitTemp = InitTemp;
+			measurements.Temperatures = temperatures;
+			measurements.XFluxes = xFluxes;
+			measurements.YFluxes = yFluxes;
+			return measurements;
+		}
+
+		private void UpdateParams()
+		{
+			Temperature = temperatures[^1];
+			BaseTable = Material.BaseData(Temperature, out heatCapacity);
+			ScatterTable = Material.ScatterTable(Temperature);
+		}
 		public override string ToString() => $"Sensor {ID}: {Math.Round(Temperature, 2)}";
 	}
 

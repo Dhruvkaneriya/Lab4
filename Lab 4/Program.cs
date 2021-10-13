@@ -29,6 +29,14 @@ namespace Lab4
 
 			Console.WriteLine(c);
 
+			for (int i = 0; i < 1000; ++i)
+			{
+				c.AddPhonon(new Phonon(-1));
+			}
+			c.TakeMeasurements(1e6, 300);
+			
+            Console.WriteLine(c);
+
 		}
 	}
 }
